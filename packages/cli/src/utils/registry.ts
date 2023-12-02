@@ -1,5 +1,3 @@
-import { promises as fs } from 'fs';
-
 export const STYLES_COMPONENTS = [
   'theme',
   'useStyles',
@@ -13,27 +11,29 @@ export const ALL_COMPONENTS = [
   'Input',
 ]
 
-export const COMPONENTS_CONFIG = [
-  {
-    name: 'Text'
-  },
-  {
-    name: 'DescriptionText',
-    componentDependencies: ['Text'],
-    npmDependencies: ['react-native-switch']
-  },
-  {
-    name: 'Button',
-    componentDependencies: ['Text'],
-  },
-  {
-    name: 'Input',
-    componentDependencies: ['Text', 'DescriptionText'],
-  }
-];
+export const COMPONENTS_CONFIG: {
+  name: string
+  componentDependencies?: string[]
+  npmDependencies?: string[]
+}[] = [
+    {
+      name: 'Text'
+    },
+    {
+      name: 'DescriptionText',
+      componentDependencies: ['Text'],
+    },
+    {
+      name: 'Button',
+      componentDependencies: ['Text'],
+    },
+    {
+      name: 'Input',
+      componentDependencies: ['Text', 'DescriptionText'],
+    }
+  ];
 
-const baseUrl =
-  '/Users/rmyagchenkov/ui-component-lib.nosync/expo-starter';
+const baseUrl = 'https://github.com/ro-mgh/mallaui'
 
 function getUniqueElements(components: string[]) {
   const uniqueElements = new Set();
@@ -62,10 +62,8 @@ export async function fetchComponents(components: string[]) {
     const fetchedComponents = await Promise.all(
       componentsToAdd.map(async component => {
         const componentConfig = COMPONENTS_CONFIG.find(c => c.name === component)
-        // const response = await fetch(`${baseUrl}/components/${componentConfig?.name}.tsx`);
-        // const content = await response.text();
-        const response = await fs.readFile(`${baseUrl}/components/ui/${componentConfig?.name}.tsx`, 'utf8')
-        const content = response
+        const response = await fetch(`${baseUrl}/components/ui/${componentConfig?.name}.tsx`);
+        const content = await response.text();
         return {
           name: `${component}.tsx`,
           content,
@@ -88,10 +86,8 @@ export async function fetchStyles() {
   try {
     const fetchedStyles = await Promise.all(
       STYLES_COMPONENTS.map(async fileName => {
-        // const response = await fetch(`${baseUrl}/styles/${fileName}.ts`);
-        // const content = await response.text();
-        const response = await fs.readFile(`${baseUrl}/styles/${fileName}.ts`, 'utf8')
-        const content = response
+        const response = await fetch(`${baseUrl}/styles/${fileName}.ts`);
+        const content = await response.text();
         return {
           name: `${fileName}.ts`,
           content,
