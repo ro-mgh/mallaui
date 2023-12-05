@@ -22,9 +22,9 @@ export default function Primitives() {
 
   return (
     <>
-      <ComponentLink name='Text' link='/primitives/text' />
-      <ComponentLink name='Button' link='/primitives/button' />
-      <ComponentLink name='Input' link='/primitives/input' />
+      <ComponentLink name='Text' link='/text' />
+      <ComponentLink name='Button' link='/button' />
+      <ComponentLink name='Input' link='/input' />
     </>
   );
 }

@@ -1,4 +1,4 @@
-# malla-ui
+# Malla UI
 
 A CLI for adding components to your project.
 
