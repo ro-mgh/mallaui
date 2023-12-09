@@ -4,13 +4,6 @@ export const STYLES_COMPONENTS = [
   'useTheme',
 ];
 
-export const ALL_COMPONENTS = [
-  'Text',
-  'DescriptionText',
-  'Button',
-  'Input',
-]
-
 export const COMPONENTS_CONFIG: {
   name: string
   componentDependencies?: string[]
@@ -30,10 +23,20 @@ export const COMPONENTS_CONFIG: {
     {
       name: 'Input',
       componentDependencies: ['Text', 'DescriptionText'],
+    },
+    {
+      name: 'Switch',
+      componentDependencies: ['Text', 'DescriptionText'],
+    },
+    {
+      name: 'Checkbox',
+      componentDependencies: ['Text', 'DescriptionText'],
     }
   ];
 
-const baseUrl = 'https://github.com/ro-mgh/mallaui'
+export const ALL_COMPONENTS = COMPONENTS_CONFIG.map(config => config.name);
+
+const baseUrl = 'https://raw.githubusercontent.com/ro-mgh/mallaui/main'
 
 function getUniqueElements(components: string[]) {
   const uniqueElements = new Set();

@@ -10,7 +10,7 @@ function main() {
   program
     .name('mallaui')
     .description('add components and dependencies to your react native project')
-    .version('0.0.1');
+    .version('0.0.3');
 
   program.addCommand(init).addCommand(add);
 

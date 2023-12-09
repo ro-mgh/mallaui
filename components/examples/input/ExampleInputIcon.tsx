@@ -15,7 +15,10 @@ export function ExampleInputIcon() {
         onChangeText={setInputValue}
         rightSlot={
           inputValue ? (
-            <TouchableOpacity onPress={() => setInputValue('')}>
+            <TouchableOpacity
+              onPress={() => setInputValue('')}
+              hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
+            >
               <Ionicons
                 name='close-circle-outline'
                 size={20}

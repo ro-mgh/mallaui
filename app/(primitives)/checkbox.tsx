@@ -2,20 +2,21 @@ import {StyleSheet, View} from 'react-native';
 
 import {BackgroundView} from '../../components/ui/BackgroundView';
 import ScreenWrapper from '../../components/ScreenWrapper';
-import {ExampleInput} from '../../components/examples/input/ExampleInput';
-import {ExampleInputLabel} from '../../components/examples/input/ExampleInputLabel';
-import {ExampleInputIcon} from '../../components/examples/input/ExampleInputIcon';
-import {ExampleInputError} from '../../components/examples/input/ExampleInputError';
-import {ExampleInputDescription} from '../../components/examples/input/ExampleInputDescription';
-import {ExampleInputDisabled} from '../../components/examples/input/ExampleInputDisabled';
 import {Stack} from 'expo-router';
+import {ExampleSwitch} from '../../components/examples/switch/ExampleSwitch';
+import {ExampleSwitchLabel} from '../../components/examples/switch/ExampleSwitchLabel';
+import {ExampleSwitchLabelDescription} from '../../components/examples/switch/ExampleSwitchLabelDescription';
+import {ExampleCheckbox} from '../../components/examples/checkbox/ExampleCheckbox';
+import {ExampleCheckboxLabel} from '../../components/examples/checkbox/ExampleCheckboxLabel';
+import {ExampleCheckboxLabelDes} from '../../components/examples/checkbox/ExampleCheckboxLabelDes';
+import {ExampleCheckboxDisabled} from '../../components/examples/checkbox/ExampleCheckboxDisabled';
 
-export default function InputScreen() {
+export default function TextScreen() {
   return (
     <BackgroundView style={styles.container}>
       <Stack.Screen
         options={{
-          title: 'Input'
+          title: 'Checkbox'
         }}
       />
       <ScreenWrapper>
@@ -25,25 +26,16 @@ export default function InputScreen() {
           }}
         >
           <View style={{marginBottom: 10}}>
-            <ExampleInput />
+            <ExampleCheckbox />
           </View>
           <View style={{marginBottom: 10}}>
-            <ExampleInputLabel />
+            <ExampleCheckboxLabel />
           </View>
           <View style={{marginBottom: 10}}>
-            <ExampleInputIcon />
+            <ExampleCheckboxLabelDes />
           </View>
-
           <View style={{marginBottom: 10}}>
-            <ExampleInputError />
-          </View>
-
-          <View style={{marginBottom: 10}}>
-            <ExampleInputDescription />
-          </View>
-
-          <View style={{marginBottom: 10}}>
-            <ExampleInputDisabled />
+            <ExampleCheckboxDisabled />
           </View>
         </View>
       </ScreenWrapper>

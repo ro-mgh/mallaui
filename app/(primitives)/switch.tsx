@@ -2,20 +2,18 @@ import {StyleSheet, View} from 'react-native';
 
 import {BackgroundView} from '../../components/ui/BackgroundView';
 import ScreenWrapper from '../../components/ScreenWrapper';
-import {ExampleInput} from '../../components/examples/input/ExampleInput';
-import {ExampleInputLabel} from '../../components/examples/input/ExampleInputLabel';
-import {ExampleInputIcon} from '../../components/examples/input/ExampleInputIcon';
-import {ExampleInputError} from '../../components/examples/input/ExampleInputError';
-import {ExampleInputDescription} from '../../components/examples/input/ExampleInputDescription';
-import {ExampleInputDisabled} from '../../components/examples/input/ExampleInputDisabled';
 import {Stack} from 'expo-router';
+import {ExampleSwitch} from '../../components/examples/switch/ExampleSwitch';
+import {ExampleSwitchLabel} from '../../components/examples/switch/ExampleSwitchLabel';
+import {ExampleSwitchLabelDescription} from '../../components/examples/switch/ExampleSwitchLabelDescription';
+import {ExampleSwitchDisabled} from '../../components/examples/switch/ExampleSwitchDisabled';
 
-export default function InputScreen() {
+export default function TextScreen() {
   return (
     <BackgroundView style={styles.container}>
       <Stack.Screen
         options={{
-          title: 'Input'
+          title: 'Switch'
         }}
       />
       <ScreenWrapper>
@@ -25,25 +23,16 @@ export default function InputScreen() {
           }}
         >
           <View style={{marginBottom: 10}}>
-            <ExampleInput />
+            <ExampleSwitch />
           </View>
           <View style={{marginBottom: 10}}>
-            <ExampleInputLabel />
+            <ExampleSwitchLabel />
           </View>
           <View style={{marginBottom: 10}}>
-            <ExampleInputIcon />
+            <ExampleSwitchLabelDescription />
           </View>
-
           <View style={{marginBottom: 10}}>
-            <ExampleInputError />
-          </View>
-
-          <View style={{marginBottom: 10}}>
-            <ExampleInputDescription />
-          </View>
-
-          <View style={{marginBottom: 10}}>
-            <ExampleInputDisabled />
+            <ExampleSwitchDisabled />
           </View>
         </View>
       </ScreenWrapper>
