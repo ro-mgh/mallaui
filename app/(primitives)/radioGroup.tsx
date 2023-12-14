@@ -3,17 +3,16 @@ import {StyleSheet, View} from 'react-native';
 import {BackgroundView} from '../../components/ui/BackgroundView';
 import ScreenWrapper from '../../components/ScreenWrapper';
 import {Stack} from 'expo-router';
-import {ExampleSwitch} from '../../components/examples/switch/ExampleSwitch';
-import {ExampleSwitchLabel} from '../../components/examples/switch/ExampleSwitchLabel';
-import {ExampleSwitchLabelDescription} from '../../components/examples/switch/ExampleSwitchLabelDescription';
-import {ExampleSwitchDisabled} from '../../components/examples/switch/ExampleSwitchDisabled';
+import {ExampleRadioGroup} from '../../components/examples/radioGroup/ExampleRadioGroup';
+import {ExampleRadioGroupDescription} from '../../components/examples/radioGroup/ExampleRadioGroupDescription';
+import {ExampleRadioGroupDisabled} from '../../components/examples/radioGroup/ExampleRadioGroupDisabled';
 
-export default function SwitchScreen() {
+export default function RadioGroupScreen() {
   return (
     <BackgroundView style={styles.container}>
       <Stack.Screen
         options={{
-          title: 'Switch'
+          title: 'RadioGroup'
         }}
       />
       <ScreenWrapper>
@@ -23,16 +22,13 @@ export default function SwitchScreen() {
           }}
         >
           <View style={{marginBottom: 10}}>
-            <ExampleSwitch />
+            <ExampleRadioGroup />
           </View>
           <View style={{marginBottom: 10}}>
-            <ExampleSwitchLabel />
+            <ExampleRadioGroupDescription />
           </View>
           <View style={{marginBottom: 10}}>
-            <ExampleSwitchLabelDescription />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleSwitchDisabled />
+            <ExampleRadioGroupDisabled />
           </View>
         </View>
       </ScreenWrapper>

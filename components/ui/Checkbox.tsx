@@ -77,7 +77,7 @@ interface ICheckboxProps {
   style?: ViewStyle;
 }
 
-export const Checkbox: FC<ICheckboxProps> = ({
+const Checkbox: FC<ICheckboxProps> = ({
   style,
   value,
   onValueChange,
@@ -104,9 +104,7 @@ export const Checkbox: FC<ICheckboxProps> = ({
             {label}
           </Text>
         ) : null}
-        {description ? (
-          <DescriptionText type={'info'}>{description}</DescriptionText>
-        ) : null}
+        {description ? <DescriptionText>{description}</DescriptionText> : null}
       </View>
       <Pressable
         disabled={isDisabled}
@@ -130,3 +128,7 @@ export const Checkbox: FC<ICheckboxProps> = ({
     </View>
   );
 };
+
+Checkbox.displayName = 'Checkbox';
+
+export {Checkbox};

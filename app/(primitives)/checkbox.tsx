@@ -3,15 +3,12 @@ import {StyleSheet, View} from 'react-native';
 import {BackgroundView} from '../../components/ui/BackgroundView';
 import ScreenWrapper from '../../components/ScreenWrapper';
 import {Stack} from 'expo-router';
-import {ExampleSwitch} from '../../components/examples/switch/ExampleSwitch';
-import {ExampleSwitchLabel} from '../../components/examples/switch/ExampleSwitchLabel';
-import {ExampleSwitchLabelDescription} from '../../components/examples/switch/ExampleSwitchLabelDescription';
 import {ExampleCheckbox} from '../../components/examples/checkbox/ExampleCheckbox';
 import {ExampleCheckboxLabel} from '../../components/examples/checkbox/ExampleCheckboxLabel';
 import {ExampleCheckboxLabelDes} from '../../components/examples/checkbox/ExampleCheckboxLabelDes';
 import {ExampleCheckboxDisabled} from '../../components/examples/checkbox/ExampleCheckboxDisabled';
 
-export default function TextScreen() {
+export default function CheckboxScreen() {
   return (
     <BackgroundView style={styles.container}>
       <Stack.Screen

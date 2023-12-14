@@ -158,7 +158,7 @@ interface IButtonProps {
 /**
  * Basic button component.
  */
-export const Button: FC<IButtonProps> = ({
+const Button: FC<IButtonProps> = ({
   title,
   style,
   isLoading = false,
@@ -209,3 +209,7 @@ export const Button: FC<IButtonProps> = ({
     </TouchableOpacity>
   );
 };
+
+Button.displayName = 'Button';
+
+export {Button};

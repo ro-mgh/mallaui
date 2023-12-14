@@ -40,7 +40,7 @@ interface ISwitchProps extends SwitchProps {
   isDisabled?: boolean;
 }
 
-export const Switch: FC<ISwitchProps> = ({
+const Switch: FC<ISwitchProps> = ({
   style,
   value,
   label,
@@ -64,9 +64,7 @@ export const Switch: FC<ISwitchProps> = ({
             {label}
           </Text>
         ) : null}
-        {description ? (
-          <DescriptionText type={'info'}>{description}</DescriptionText>
-        ) : null}
+        {description ? <DescriptionText>{description}</DescriptionText> : null}
       </View>
       <DefaultSwitch
         style={[style]}
@@ -79,3 +77,7 @@ export const Switch: FC<ISwitchProps> = ({
     </View>
   );
 };
+
+Switch.displayName = 'Switch';
+
+export {Switch};

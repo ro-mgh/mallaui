@@ -27,6 +27,7 @@ export default function Primitives() {
       <ComponentLink name='Input' link='/input' />
       <ComponentLink name='Switch' link='/switch' />
       <ComponentLink name='Checkbox' link='/checkbox' />
+      <ComponentLink name='RadioGroup' link='/radioGroup' />
     </>
   );
 }

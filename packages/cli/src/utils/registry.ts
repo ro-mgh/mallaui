@@ -31,6 +31,10 @@ export const COMPONENTS_CONFIG: {
     {
       name: 'Checkbox',
       componentDependencies: ['Text', 'DescriptionText'],
+    },
+    {
+      name: 'RadioGroup',
+      componentDependencies: ['Text', 'DescriptionText'],
     }
   ];
 

@@ -7,23 +7,23 @@ interface IDescriptionTextProps extends TextProps {
    * Type of text.
    * @default 'info'
    */
-  type?: 'info' | 'error';
+  isError?: boolean;
 
   children: ReactNode;
 }
 
-export const DescriptionText: FC<IDescriptionTextProps> = ({
-  type = 'info',
+const DescriptionText: FC<IDescriptionTextProps> = ({
+  isError = false,
   children,
   ...otherProps
 }) => {
   return (
-    <Text
-      size='sm'
-      color={type === 'error' ? 'destructive' : 'secondary'}
-      {...otherProps}
-    >
+    <Text size='sm' color={isError ? 'destructive' : 'secondary'} {...otherProps}>
       {children}
     </Text>
   );
 };
+
+DescriptionText.displayName = 'DescriptionText';
+
+export {DescriptionText};

@@ -89,7 +89,7 @@ interface IInputProps extends TextInputProps {
   wrapperStyle?: any;
 }
 
-export const Input = forwardRef<TextInput, IInputProps>((props, ref) => {
+const Input = forwardRef<TextInput, IInputProps>((props, ref) => {
   const {wrapperStyle, rightSlot, style, label, isDisabled, error, description, value} =
     props;
   const styles = useStyles(defaultStyles);
@@ -129,10 +129,14 @@ export const Input = forwardRef<TextInput, IInputProps>((props, ref) => {
         {rightSlot ? <View style={[styles.rightSlot]}>{rightSlot}</View> : null}
       </View>
       {error || description ? (
-        <DescriptionText type={!!error ? 'error' : 'info'} style={[styles.bottomText]}>
+        <DescriptionText isError={!!error} style={[styles.bottomText]}>
           {error || description}
         </DescriptionText>
       ) : null}
     </View>
   );
 });
+
+Input.displayName = 'Input';
+
+export {Input};

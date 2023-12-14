@@ -90,7 +90,7 @@ interface ITextProps extends TextProps {
   children: ReactNode;
 }
 
-export const Text: FC<ITextProps> = ({
+const Text: FC<ITextProps> = ({
   style,
   children,
   color = 'primary',
@@ -114,3 +114,7 @@ export const Text: FC<ITextProps> = ({
     </DefaultText>
   );
 };
+
+Text.displayName = 'Text';
+
+export {Text};
