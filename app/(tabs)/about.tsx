@@ -6,7 +6,9 @@ import {Text} from '../../components/ui/Text';
 export default function TabTwoScreen() {
   return (
     <BackgroundView style={styles.container}>
-      <Text>about</Text>
+      <Text>malla UI</Text>
+
+      <Text>Build for RN</Text>
     </BackgroundView>
   );
 }

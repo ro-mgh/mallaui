@@ -6,6 +6,7 @@ import {Stack} from 'expo-router';
 import {ExampleRadioGroup} from '../../components/examples/radioGroup/ExampleRadioGroup';
 import {ExampleRadioGroupDescription} from '../../components/examples/radioGroup/ExampleRadioGroupDescription';
 import {ExampleRadioGroupDisabled} from '../../components/examples/radioGroup/ExampleRadioGroupDisabled';
+import VariantWrapper from '../../components/VariantWrapper';
 
 export default function RadioGroupScreen() {
   return (
@@ -16,21 +17,15 @@ export default function RadioGroupScreen() {
         }}
       />
       <ScreenWrapper>
-        <View
-          style={{
-            marginVertical: 10
-          }}
-        >
-          <View style={{marginBottom: 10}}>
-            <ExampleRadioGroup />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleRadioGroupDescription />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleRadioGroupDisabled />
-          </View>
-        </View>
+        <VariantWrapper label='Default'>
+          <ExampleRadioGroup />
+        </VariantWrapper>
+        <VariantWrapper label='Description'>
+          <ExampleRadioGroupDescription />
+        </VariantWrapper>
+        <VariantWrapper label='Disabled'>
+          <ExampleRadioGroupDisabled />
+        </VariantWrapper>
       </ScreenWrapper>
     </BackgroundView>
   );

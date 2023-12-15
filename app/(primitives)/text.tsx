@@ -7,6 +7,7 @@ import {ExampleTextColor} from '../../components/examples/text/ExampleTextColor'
 import {ExampleTextFontWeight} from '../../components/examples/text/ExampleTextFontWeight';
 import {ExampleTextSize} from '../../components/examples/text/ExampleTextSize';
 import {Stack} from 'expo-router';
+import VariantWrapper from '../../components/VariantWrapper';
 
 export default function TextScreen() {
   return (
@@ -17,24 +18,17 @@ export default function TextScreen() {
         }}
       />
       <ScreenWrapper>
-        <View style={{marginBottom: 10, marginTop: 20}}>
-          <Text size='xxxl' color='primary' style={{marginBottom: 5}}>
-            Text variants
-          </Text>
+        <VariantWrapper label='Color'>
           <ExampleTextColor />
-        </View>
+        </VariantWrapper>
 
-        <View style={{marginBottom: 10, marginTop: 20}}>
-          <Text size='xxxl' color='primary' style={{marginBottom: 5}}>
-            Font weight
-          </Text>
+        <VariantWrapper label='Font weight'>
           <ExampleTextFontWeight />
-        </View>
+        </VariantWrapper>
 
-        <Text size='xxxl' color='primary' style={{marginBottom: 5}}>
-          Text sizes
-        </Text>
-        <ExampleTextSize />
+        <VariantWrapper label='Size'>
+          <ExampleTextSize />
+        </VariantWrapper>
       </ScreenWrapper>
     </BackgroundView>
   );

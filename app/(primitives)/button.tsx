@@ -1,4 +1,4 @@
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 
 import {Stack} from 'expo-router';
 import {Text} from '../../components/ui/Text';
@@ -9,6 +9,7 @@ import {ExampleButtonVariant} from '../../components/examples/button/ExampleButt
 import {Button} from '../../components/ui/Button';
 import {ExampleButtonIcon} from '../../components/examples/button/ExampleButtonIcon';
 import ScreenWrapper from '../../components/ScreenWrapper';
+import VariantWrapper from '../../components/VariantWrapper';
 
 export default function ButtonScreen() {
   return (
@@ -19,53 +20,37 @@ export default function ButtonScreen() {
         }}
       />
       <ScreenWrapper>
-        <Text size='xxxl' color='primary' style={{marginBottom: 5, marginTop: 20}}>
-          Sizes
-        </Text>
-        <View style={{marginBottom: 10}}>
+        <VariantWrapper label='Size'>
           <ExampleButtonSize />
-        </View>
+        </VariantWrapper>
 
-        <View style={{marginBottom: 10}}>
-          <Text size='xxxl' color='primary' style={{marginBottom: 5}}>
-            States
-          </Text>
+        <VariantWrapper label='State'>
           <ExampleButtonState />
-        </View>
+        </VariantWrapper>
 
-        <View style={{marginBottom: 10}}>
-          <Text size='xxxl' color='primary' style={{marginBottom: 5}}>
-            Shape
-          </Text>
+        <VariantWrapper label='Shape'>
           <ExampleButtonShape />
-        </View>
+        </VariantWrapper>
 
-        <View style={{marginBottom: 10}}>
-          <Text size='xxxl' color='primary' style={{marginBottom: 5}}>
-            Variants
-          </Text>
+        <VariantWrapper label='Variant'>
           <ExampleButtonVariant />
-        </View>
+        </VariantWrapper>
 
-        <Text size='xxxl' color='primary' style={{marginBottom: 5}}>
-          Button Group
-        </Text>
-        <View style={{flexDirection: 'row', marginBottom: 10}}>
-          <Button
-            title='Cancel'
-            size='md'
-            style={{marginRight: 10, flex: 1}}
-            variant='outline'
-          />
-          <Button title='Accept' size='md' style={{flex: 1}} variant='default' />
-        </View>
+        <VariantWrapper label='Button Group'>
+          <View style={{flexDirection: 'row'}}>
+            <Button
+              title='Cancel'
+              size='md'
+              style={{marginRight: 10, flex: 1}}
+              variant='outline'
+            />
+            <Button title='Accept' size='md' style={{flex: 1}} variant='default' />
+          </View>
+        </VariantWrapper>
 
-        <Text size='xxxl' color='primary' style={{marginBottom: 5}}>
-          Icon
-        </Text>
-        <View style={{marginBottom: 10}}>
+        <VariantWrapper label='Icon'>
           <ExampleButtonIcon />
-        </View>
+        </VariantWrapper>
       </ScreenWrapper>
     </View>
   );

@@ -3,50 +3,30 @@ import {StyleSheet, View} from 'react-native';
 import {colors} from '../../styles/theme';
 import {Text} from '../ui/Text';
 import ScreenWrapper from '../ScreenWrapper';
+import ComponentWrapper from '../ComponentWrapper';
+import {ExampleColor} from '../examples/color/ExampleColor';
 
 export default function Theme() {
   return (
     <ScreenWrapper>
-      <Text fontWeight='bold' size='xxl'>
-        Colors
-      </Text>
       <View
         style={{
-          flexDirection: 'row'
+          flexDirection: 'column'
         }}
       >
         {[
-          {color: colors.slate, name: 'slate'},
-          {color: colors.zink, name: 'zink'},
-          {color: colors.red, name: 'red'},
-          {color: colors.cyan, name: 'cyan'},
-          {color: colors.purple, name: 'purple'},
-          {color: colors.rose, name: 'rose'},
-          {color: colors.pink, name: 'pink'}
+          {color: colors.slate, name: 'Slate'},
+          {color: colors.zink, name: 'Zink'},
+          {color: colors.red, name: 'Red'},
+          {color: colors.cyan, name: 'Cyan'},
+          {color: colors.purple, name: 'Purple'},
+          {color: colors.rose, name: 'Rose'},
+          {color: colors.pink, name: 'Pink'}
         ].map(({color, name}) => {
           return (
-            <View
-              key={name}
-              style={{
-                flexDirection: 'column',
-                marginRight: 10
-              }}
-            >
-              {Object.keys(color).map((variant) => {
-                return (
-                  <View
-                    key={variant}
-                    style={{
-                      backgroundColor: color[variant],
-                      height: 40,
-                      width: 40,
-                      borderRadius: 10,
-                      marginBottom: 5
-                    }}
-                  />
-                );
-              })}
-            </View>
+            <ComponentWrapper label={name} link='/slate'>
+              <ExampleColor colors={color} />
+            </ComponentWrapper>
           );
         })}
       </View>

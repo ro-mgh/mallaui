@@ -4,6 +4,15 @@ import {StyleSheet, TouchableOpacity} from 'react-native';
 import {Text} from './ui/Text';
 import {useTheme} from '../styles/useTheme';
 import {Link} from 'expo-router';
+import ComponentWrapper from './ComponentWrapper';
+import {ExampleButton} from './examples/button/ExampleButton';
+import {ExampleTextSize} from './examples/text/ExampleTextSize';
+import {ExampleInput} from './examples/input/ExampleInput';
+import {ExampleSwitch} from './examples/switch/ExampleSwitch';
+import {ExampleCheckbox} from './examples/checkbox/ExampleCheckbox';
+import {ExampleRadioGroup} from './examples/radioGroup/ExampleRadioGroup';
+import ScreenWrapper from './ScreenWrapper';
+import {ExampleSwitchLabel} from './examples/switch/ExampleSwitchLabel';
 
 const ComponentLink = ({name, link}: {name: string; link: string}) => {
   return (
@@ -22,12 +31,26 @@ export default function Primitives() {
 
   return (
     <>
-      <ComponentLink name='Text' link='/text' />
-      <ComponentLink name='Button' link='/button' />
-      <ComponentLink name='Input' link='/input' />
-      <ComponentLink name='Switch' link='/switch' />
-      <ComponentLink name='Checkbox' link='/checkbox' />
-      <ComponentLink name='RadioGroup' link='/radioGroup' />
+      <ScreenWrapper>
+        <ComponentWrapper label='Text' link='/text'>
+          <ExampleTextSize />
+        </ComponentWrapper>
+        <ComponentWrapper label='Button' link='/button'>
+          <ExampleButton />
+        </ComponentWrapper>
+        <ComponentWrapper label='Input' link='/input'>
+          <ExampleInput />
+        </ComponentWrapper>
+        <ComponentWrapper label='Switch' link='/switch'>
+          <ExampleSwitchLabel />
+        </ComponentWrapper>
+        <ComponentWrapper label='Checkbox' link='/checkbox'>
+          <ExampleCheckbox />
+        </ComponentWrapper>
+        <ComponentWrapper label='RadioGroup' link='/radioGroup'>
+          <ExampleRadioGroup />
+        </ComponentWrapper>
+      </ScreenWrapper>
     </>
   );
 }

@@ -7,6 +7,7 @@ import {ExampleSwitch} from '../../components/examples/switch/ExampleSwitch';
 import {ExampleSwitchLabel} from '../../components/examples/switch/ExampleSwitchLabel';
 import {ExampleSwitchLabelDescription} from '../../components/examples/switch/ExampleSwitchLabelDescription';
 import {ExampleSwitchDisabled} from '../../components/examples/switch/ExampleSwitchDisabled';
+import VariantWrapper from '../../components/VariantWrapper';
 
 export default function SwitchScreen() {
   return (
@@ -17,24 +18,15 @@ export default function SwitchScreen() {
         }}
       />
       <ScreenWrapper>
-        <View
-          style={{
-            marginVertical: 10
-          }}
-        >
-          <View style={{marginBottom: 10}}>
-            <ExampleSwitch />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleSwitchLabel />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleSwitchLabelDescription />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleSwitchDisabled />
-          </View>
-        </View>
+        <VariantWrapper label='Default'>
+          <ExampleSwitchLabel />
+        </VariantWrapper>
+        <VariantWrapper label='Description'>
+          <ExampleSwitchLabelDescription />
+        </VariantWrapper>
+        <VariantWrapper label='Disabled'>
+          <ExampleSwitchDisabled />
+        </VariantWrapper>
       </ScreenWrapper>
     </BackgroundView>
   );

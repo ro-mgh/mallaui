@@ -9,6 +9,7 @@ import {ExampleInputError} from '../../components/examples/input/ExampleInputErr
 import {ExampleInputDescription} from '../../components/examples/input/ExampleInputDescription';
 import {ExampleInputDisabled} from '../../components/examples/input/ExampleInputDisabled';
 import {Stack} from 'expo-router';
+import VariantWrapper from '../../components/VariantWrapper';
 
 export default function InputScreen() {
   return (
@@ -19,33 +20,29 @@ export default function InputScreen() {
         }}
       />
       <ScreenWrapper>
-        <View
-          style={{
-            marginVertical: 10
-          }}
-        >
-          <View style={{marginBottom: 10}}>
-            <ExampleInput />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleInputLabel />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleInputIcon />
-          </View>
+        <VariantWrapper label='Default'>
+          <ExampleInput />
+        </VariantWrapper>
 
-          <View style={{marginBottom: 10}}>
-            <ExampleInputError />
-          </View>
+        <VariantWrapper label='Label'>
+          <ExampleInputLabel />
+        </VariantWrapper>
 
-          <View style={{marginBottom: 10}}>
-            <ExampleInputDescription />
-          </View>
+        <VariantWrapper label='Icon'>
+          <ExampleInputIcon />
+        </VariantWrapper>
 
-          <View style={{marginBottom: 10}}>
-            <ExampleInputDisabled />
-          </View>
-        </View>
+        <VariantWrapper label='Error'>
+          <ExampleInputError />
+        </VariantWrapper>
+
+        <VariantWrapper label='Description'>
+          <ExampleInputDescription />
+        </VariantWrapper>
+
+        <VariantWrapper label='Disabled'>
+          <ExampleInputDisabled />
+        </VariantWrapper>
       </ScreenWrapper>
     </BackgroundView>
   );

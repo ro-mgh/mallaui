@@ -7,6 +7,7 @@ import {ExampleCheckbox} from '../../components/examples/checkbox/ExampleCheckbo
 import {ExampleCheckboxLabel} from '../../components/examples/checkbox/ExampleCheckboxLabel';
 import {ExampleCheckboxLabelDes} from '../../components/examples/checkbox/ExampleCheckboxLabelDes';
 import {ExampleCheckboxDisabled} from '../../components/examples/checkbox/ExampleCheckboxDisabled';
+import VariantWrapper from '../../components/VariantWrapper';
 
 export default function CheckboxScreen() {
   return (
@@ -17,24 +18,15 @@ export default function CheckboxScreen() {
         }}
       />
       <ScreenWrapper>
-        <View
-          style={{
-            marginVertical: 10
-          }}
-        >
-          <View style={{marginBottom: 10}}>
-            <ExampleCheckbox />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleCheckboxLabel />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleCheckboxLabelDes />
-          </View>
-          <View style={{marginBottom: 10}}>
-            <ExampleCheckboxDisabled />
-          </View>
-        </View>
+        <VariantWrapper label='Default'>
+          <ExampleCheckboxLabel />
+        </VariantWrapper>
+        <VariantWrapper label='Description'>
+          <ExampleCheckboxLabelDes />
+        </VariantWrapper>
+        <VariantWrapper label='Disabled'>
+          <ExampleCheckboxDisabled />
+        </VariantWrapper>
       </ScreenWrapper>
     </BackgroundView>
   );
