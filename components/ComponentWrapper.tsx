@@ -41,7 +41,7 @@ export default function ComponentWrapper({
 }: {
   children: ReactNode;
   label: string;
-  link: string;
+  link?: string;
 }) {
   const style = useStyles(defaultStyles);
 
@@ -51,9 +51,11 @@ export default function ComponentWrapper({
         <Text size='xl' fontWeight='bold' style={style.text}>
           {label}
         </Text>
-        <Link href={link} asChild>
-          <Button variant='ghost' size='sm' title='Variants ⇾' />
-        </Link>
+        {link ? (
+          <Link href={link} asChild>
+            <Button variant='ghost' size='sm' title='Variants ⇾' />
+          </Link>
+        ) : null}
       </View>
       <View style={style.contentWrapper}>{children}</View>
     </View>

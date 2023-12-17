@@ -190,22 +190,27 @@ const Button: FC<IButtonProps> = ({
       onPress={handleButtonPress}
       disabled={isDisabled || isLoading}
     >
+      {leftSlot && !isLoading ? (
+        <View style={[styles.base.leftSlot]}>{leftSlot}</View>
+      ) : null}
       {isLoading ? (
-        <ActivityIndicator size='small' color={styles.variants.text[variant].color} />
-      ) : (
-        <>
-          {leftSlot ? <View style={[styles.base.leftSlot]}>{leftSlot}</View> : null}
-          <Text
-            size={size}
-            fontWeight='medium'
-            style={[styles.variants.text[variant], textStyle]}
-            numberOfLines={1}
-          >
-            {title}
-          </Text>
-          {rightSlot ? <View style={[styles.base.rightSlot]}>{rightSlot}</View> : null}
-        </>
-      )}
+        <ActivityIndicator
+          size='small'
+          style={[styles.base.leftSlot]}
+          color={styles.variants.text[variant].color}
+        />
+      ) : null}
+      <Text
+        size={size}
+        fontWeight='medium'
+        style={[styles.variants.text[variant], textStyle]}
+        numberOfLines={1}
+      >
+        {title}
+      </Text>
+      {rightSlot && !isLoading ? (
+        <View style={[styles.base.rightSlot]}>{rightSlot}</View>
+      ) : null}
     </TouchableOpacity>
   );
 };

@@ -35,6 +35,10 @@ export const COMPONENTS_CONFIG: {
     {
       name: 'RadioGroup',
       componentDependencies: ['Text', 'DescriptionText'],
+    },
+    {
+      name: 'Tabs',
+      componentDependencies: ['Text'],
     }
   ];
 

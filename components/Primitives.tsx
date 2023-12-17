@@ -13,6 +13,7 @@ import {ExampleCheckbox} from './examples/checkbox/ExampleCheckbox';
 import {ExampleRadioGroup} from './examples/radioGroup/ExampleRadioGroup';
 import ScreenWrapper from './ScreenWrapper';
 import {ExampleSwitchLabel} from './examples/switch/ExampleSwitchLabel';
+import {ExampleTabs} from './examples/tabs/ExampleTabs';
 
 const ComponentLink = ({name, link}: {name: string; link: string}) => {
   return (
@@ -49,6 +50,9 @@ export default function Primitives() {
         </ComponentWrapper>
         <ComponentWrapper label='RadioGroup' link='/radioGroup'>
           <ExampleRadioGroup />
+        </ComponentWrapper>
+        <ComponentWrapper label='Tabs'>
+          <ExampleTabs />
         </ComponentWrapper>
       </ScreenWrapper>
     </>
