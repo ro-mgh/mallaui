@@ -11,13 +11,26 @@ const defaultStyles = () => {
   });
 };
 
-export default function ScreenWrapper({children}: {children: ReactNode}) {
+export default function ScreenWrapper({
+  children,
+  isCards
+}: {
+  children: ReactNode;
+  isCards?: boolean;
+}) {
   const {theme} = useTheme();
   const style = useStyles(defaultStyles);
 
   return (
     <ScrollView
-      style={[style.wrapper, {paddingHorizontal: theme.paddings.screenPaddingHorizontal}]}
+      style={[
+        style.wrapper,
+        {
+          paddingHorizontal: isCards
+            ? theme.paddings.screenPaddingHorizontalWithCards
+            : theme.paddings.screenPaddingHorizontal
+        }
+      ]}
       showsVerticalScrollIndicator={false}
     >
       <View

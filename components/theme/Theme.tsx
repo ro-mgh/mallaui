@@ -1,31 +1,32 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {colors} from '../../styles/theme';
-import {Text} from '../ui/Text';
+import {tailwindColors} from '../../styles/theme';
 import ScreenWrapper from '../ScreenWrapper';
 import ComponentWrapper from '../ComponentWrapper';
 import {ExampleColor} from '../examples/color/ExampleColor';
+import {Text} from '../ui/Text';
 
 export default function Theme() {
   return (
-    <ScreenWrapper>
+    <ScreenWrapper isCards>
       <View
         style={{
           flexDirection: 'column'
         }}
       >
-        {[
-          {color: colors.slate, name: 'Slate'},
-          {color: colors.zink, name: 'Zink'},
-          {color: colors.red, name: 'Red'},
-          {color: colors.cyan, name: 'Cyan'},
-          {color: colors.purple, name: 'Purple'},
-          {color: colors.rose, name: 'Rose'},
-          {color: colors.pink, name: 'Pink'}
-        ].map(({color, name}) => {
+        {Object.keys(tailwindColors).map((color) => {
           return (
-            <ComponentWrapper label={name} link='/slate'>
-              <ExampleColor colors={color} />
+            <ComponentWrapper
+              label={color.charAt(0).toUpperCase() + color.slice(1)}
+              link='/color'
+              key={color}
+              params={{
+                colorName: color
+              }}
+            >
+              <ExampleColor
+                colors={tailwindColors[color as keyof typeof tailwindColors]}
+              />
             </ComponentWrapper>
           );
         })}

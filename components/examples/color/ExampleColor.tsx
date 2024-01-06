@@ -9,10 +9,10 @@ export function ExampleColor({colors}: {colors: any}) {
             key={variant}
             style={{
               backgroundColor: colors[variant],
-              height: 60,
-              width: 20,
-              marginRight: 3,
-              borderRadius: 5
+              height: 30,
+              flex: 1,
+              marginRight: 5,
+              borderRadius: 8
             }}
           />
         );

@@ -9,7 +9,6 @@ export function ExampleTextFontWeight() {
       <Text fontWeight='regular'>{placeholder} regular</Text>
       <Text fontWeight='medium'>{placeholder} medium</Text>
       <Text fontWeight='bold'>{placeholder} bold</Text>
-      <Text fontWeight='xbold'>{placeholder} xbold</Text>
     </View>
   );
 }

@@ -18,7 +18,8 @@ const defaultStyles = (theme: AppTheme) => {
       justifyContent: 'space-between'
     },
     textWrapper: {
-      flexDirection: 'column'
+      flexDirection: 'column',
+      flex: 1
     },
     checkbox: {
       height: 20,

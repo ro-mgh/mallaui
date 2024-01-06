@@ -9,7 +9,7 @@ const defaultStyles = () => {
       marginBottom: 30
     },
     text: {
-      marginBottom: 5
+      marginBottom: 8
     }
   });
 };
@@ -25,7 +25,7 @@ export default function VariantWrapper({
 
   return (
     <View style={[style.wrapper]}>
-      <Text size='xl' fontWeight='bold' style={style.text}>
+      <Text size='lg' fontWeight='bold' style={style.text}>
         {label}
       </Text>
       {children}

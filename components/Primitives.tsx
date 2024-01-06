@@ -32,7 +32,7 @@ export default function Primitives() {
 
   return (
     <>
-      <ScreenWrapper>
+      <ScreenWrapper isCards>
         <ComponentWrapper label='Text' link='/text'>
           <ExampleTextSize />
         </ComponentWrapper>

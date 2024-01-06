@@ -37,22 +37,26 @@ const defaultStyles = (theme: AppTheme) => {
 export default function ComponentWrapper({
   children,
   label,
-  link
+  link,
+  params
 }: {
   children: ReactNode;
   label: string;
   link?: string;
+  params?: any;
 }) {
   const style = useStyles(defaultStyles);
+
+  // console.info('params', params);
 
   return (
     <View style={[style.wrapper]}>
       <View style={style.headerWrapper}>
-        <Text size='xl' fontWeight='bold' style={style.text}>
+        <Text size='lg' fontWeight='bold' style={style.text}>
           {label}
         </Text>
         {link ? (
-          <Link href={link} asChild>
+          <Link href={{pathname: link, ...(params && {params})}} asChild>
             <Button variant='ghost' size='sm' title='Variants ⇾' />
           </Link>
         ) : null}

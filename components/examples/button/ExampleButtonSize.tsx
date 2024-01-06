@@ -3,11 +3,11 @@ import {Button} from '../../ui/Button';
 
 export function ExampleButtonSize() {
   return (
-    <View style={{flexDirection: 'row', alignItems: 'center'}}>
-      <Button title='Size xl' size='xl' style={{marginRight: 5}} />
-      <Button title='Size lg' size='lg' style={{marginRight: 5}} />
-      <Button title='Size md' size='md' style={{marginRight: 5}} />
-      <Button title='Size sm' size='sm' style={{marginRight: 5}} />
+    <View style={{flexDirection: 'column', alignItems: 'center'}}>
+      <Button title='Size xl' size='xl' style={{marginBottom: 5}} />
+      <Button title='Size lg' size='lg' style={{marginBottom: 5}} />
+      <Button title='Size md' size='md' style={{marginBottom: 5}} />
+      <Button title='Size sm' size='sm' style={{marginBottom: 5}} />
     </View>
   );
 }

@@ -25,45 +25,41 @@ const defaultStyles = (theme: AppTheme) => ({
     medium: {
       fontWeight: '500' as TextStyle['fontWeight']
     },
+    // bold: {
+    //   fontWeight: '600' as TextStyle['fontWeight']
+    // },
     bold: {
-      fontWeight: '600' as TextStyle['fontWeight']
-    },
-    xbold: {
       fontWeight: '700' as TextStyle['fontWeight']
     }
   }),
   sizes: StyleSheet.create({
-    xxs: {
-      fontSize: 10,
-      lineHeight: 12
+    xxl: {
+      fontSize: 29,
+      lineHeight: 40
     },
-    xs: {
-      fontSize: 12,
-      lineHeight: 16
+    xl: {
+      fontSize: 24,
+      lineHeight: 36
     },
-    sm: {
-      fontSize: 14,
-      lineHeight: 20
+    lg: {
+      fontSize: 20,
+      lineHeight: 32
     },
     md: {
       fontSize: 16,
       lineHeight: 24
     },
-    lg: {
-      fontSize: 18,
-      lineHeight: 28
+    sm: {
+      fontSize: 14,
+      lineHeight: 20
     },
-    xl: {
-      fontSize: 20,
-      lineHeight: 32
+    xs: {
+      fontSize: 12,
+      lineHeight: 16
     },
-    xxl: {
-      fontSize: 22,
-      lineHeight: 36
-    },
-    xxxl: {
-      fontSize: 28,
-      lineHeight: 40
+    xxs: {
+      fontSize: 10,
+      lineHeight: 12
     }
   })
 });

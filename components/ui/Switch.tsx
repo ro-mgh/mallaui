@@ -18,7 +18,8 @@ const defaultStyles = () => {
       justifyContent: 'space-between'
     },
     textWrapper: {
-      flexDirection: 'column'
+      flexDirection: 'column',
+      flex: 1
     }
   });
 };

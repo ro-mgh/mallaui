@@ -26,20 +26,20 @@ const defaultStyles = (theme: AppTheme) => ({
 
   sizes: StyleSheet.create({
     sm: {
-      paddingVertical: 7,
+      paddingVertical: 10,
       paddingHorizontal: 12
     },
     md: {
-      paddingVertical: 10,
-      paddingHorizontal: 15
+      paddingVertical: 12,
+      paddingHorizontal: 16
     },
     lg: {
       paddingVertical: 12,
-      paddingHorizontal: 18
+      paddingHorizontal: 20
     },
     xl: {
-      paddingVertical: 12,
-      paddingHorizontal: 18
+      paddingVertical: 14,
+      paddingHorizontal: 24
     }
   }),
 

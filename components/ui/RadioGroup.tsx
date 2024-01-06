@@ -31,7 +31,8 @@ const defaultButtonStyles = (theme: AppTheme) => {
       justifyContent: 'space-between'
     },
     textWrapper: {
-      flexDirection: 'column'
+      flexDirection: 'column',
+      flex: 1
     },
     radio: {
       height: 20,

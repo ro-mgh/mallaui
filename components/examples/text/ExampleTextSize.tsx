@@ -5,7 +5,6 @@ export function ExampleTextSize() {
   const placeholder = 'Text size';
   return (
     <View>
-      <Text size='xxxl'>{placeholder} xxxl</Text>
       <Text size='xxl'>{placeholder} xxl</Text>
       <Text size='xl'>{placeholder} xl</Text>
       <Text size='lg'>{placeholder} lg</Text>

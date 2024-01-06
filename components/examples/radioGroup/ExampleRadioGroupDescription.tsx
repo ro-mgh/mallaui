@@ -26,17 +26,15 @@ export function ExampleRadioGroupDescription() {
   const [value, setValue] = useState(options[0].value);
 
   return (
-    <>
-      <RadioGroup defaultValue={value} onValueChange={setValue}>
-        {options.map((option) => (
-          <RadioGroup.Button
-            key={option.value}
-            value={option.value}
-            label={option.label}
-            description={option.description}
-          />
-        ))}
-      </RadioGroup>
-    </>
+    <RadioGroup defaultValue={value} onValueChange={setValue}>
+      {options.map((option) => (
+        <RadioGroup.Button
+          key={option.value}
+          value={option.value}
+          label={option.label}
+          description={option.description}
+        />
+      ))}
+    </RadioGroup>
   );
 }
