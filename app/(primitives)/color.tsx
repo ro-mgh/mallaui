@@ -32,7 +32,7 @@ export default function ColorScreen() {
             const color = colors[variant as unknown as keyof typeof colors];
 
             return (
-              <View style={styles.variantContainer}>
+              <View style={styles.variantContainer} key={color}>
                 <View style={[styles.colorBox, {backgroundColor: color}]} />
                 <View style={styles.textContainer}>
                   <Text fontWeight='bold' size='lg'>{`${colorName}-${variant}`}</Text>

@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import {BackgroundView} from '../../components/ui/BackgroundView';
 import Theme from '../../components/theme/Theme';
 
-export default function TabTwoScreen() {
+export default function ThemeTabScreen() {
   return (
     <BackgroundView style={styles.container}>
       <Theme />

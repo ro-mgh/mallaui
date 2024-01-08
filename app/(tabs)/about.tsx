@@ -10,7 +10,7 @@ import {Button} from '../../components/ui/Button';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Logo from '../../assets/icons/Logo';
 
-export default function TabTwoScreen() {
+export default function AboutTabScreen() {
   const {theme} = useTheme();
   const styles = useStyles(defaultStyles);
 

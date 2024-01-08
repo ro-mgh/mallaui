@@ -30,6 +30,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name='components'
+        options={{
+          title: 'Components',
+          tabBarIcon: ({color}) => <TabBarIcon name='cube-outline' color={color} />
+        }}
+      />
+      <Tabs.Screen
         name='theme'
         options={{
           title: 'Theme',

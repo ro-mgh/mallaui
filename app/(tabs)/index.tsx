@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import Primitives from '../../components/Primitives';
 import {BackgroundView} from '../../components/ui/BackgroundView';
 
-export default function TabOneScreen() {
+export default function PrimitivesTabScreen() {
   return (
     <BackgroundView style={styles.container}>
       <Primitives />
