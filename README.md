@@ -1,6 +1,6 @@
 # malla UI
 
-Component library for Expo and React Native projects. Inspired by [shadcn-ui](https://github.com/shadcn-ui/ui).
+Reusable components for Expo and React Native projects inspired by shadcn library [link](https://github.com/shadcn-ui/ui).
 
 # Documentation
 
