@@ -1,6 +1,6 @@
 # malla UI
 
-Component library for Expo and React Native projects. Inspired by [shadcn-ui](https://github.com/shadcn-ui/ui).
+Reusable components for Expo and React Native projects inspired by [shadcn-ui](https://github.com/shadcn-ui/ui).
 
 # Documentation
 
@@ -9,18 +9,15 @@ https://mallaui.io/
 
 ## Examples
 
-![Simulator Screenshot - iPhone 14 - 2024-01-07 at 18 10 15 Medium](https://github.com/ro-mgh/mallaui/assets/58989752/8ca15827-0ed3-4fa1-8c9f-7d1d3f6bd4a5)
-![Simulator Screenshot - iPhone 14 - 2024-01-07 at 18 10 13 Medium](https://github.com/ro-mgh/mallaui/assets/58989752/886a0b22-8f71-4f73-9eb2-08d572157690)
 
-##
-
-![Simulator Screenshot - iPhone 14 - 2024-01-07 at 18 09 48 Medium](https://github.com/ro-mgh/mallaui/assets/58989752/107e6b78-bcf8-4d0a-abcf-76209d7239d1)
-![Simulator Screenshot - iPhone 14 - 2024-01-07 at 18 09 45 Medium](https://github.com/ro-mgh/mallaui/assets/58989752/1b21af0c-2af5-44fc-aadb-2fbba16d0963)
-
-##
 
 ![Simulator Screenshot - iPhone 14 - 2024-01-07 at 18 09 35 Medium](https://github.com/ro-mgh/mallaui/assets/58989752/5a1fbfc2-4ed0-488d-9ade-96175373bcac)
 ![Simulator Screenshot - iPhone 14 - 2024-01-07 at 18 09 30 Medium](https://github.com/ro-mgh/mallaui/assets/58989752/0906f7c9-0202-4bc2-be42-fded1cad2d95)
+
+##
+
+![Simulator Screenshot - iPhone 14 - 2024-01-07 at 18 10 15 Medium](https://github.com/ro-mgh/mallaui/assets/58989752/8ca15827-0ed3-4fa1-8c9f-7d1d3f6bd4a5)
+![Simulator Screenshot - iPhone 14 - 2024-01-07 at 18 10 13 Medium](https://github.com/ro-mgh/mallaui/assets/58989752/886a0b22-8f71-4f73-9eb2-08d572157690)
 
 
 # Installation
