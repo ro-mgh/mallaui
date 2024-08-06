@@ -20,7 +20,7 @@ const defaultStyles = (theme: AppTheme) => {
       paddingHorizontal: 16,
       paddingVertical: 12,
       flex: 1,
-      height: 44,
+      minHeight: 44,
       fontSize: 16,
       lineHeight: 20,
       fontWeight: '400',

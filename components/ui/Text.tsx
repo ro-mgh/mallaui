@@ -17,19 +17,16 @@ const defaultStyles = (theme: AppTheme) => ({
   }),
   fontWeights: StyleSheet.create({
     light: {
-      fontWeight: '300' as TextStyle['fontWeight']
+      fontWeight: '300'
     },
     regular: {
-      fontWeight: '400' as TextStyle['fontWeight']
+      fontWeight: '400'
     },
     medium: {
-      fontWeight: '500' as TextStyle['fontWeight']
+      fontWeight: '500'
     },
-    // bold: {
-    //   fontWeight: '600' as TextStyle['fontWeight']
-    // },
     bold: {
-      fontWeight: '700' as TextStyle['fontWeight']
+      fontWeight: '700'
     }
   }),
   sizes: StyleSheet.create({

@@ -4,6 +4,11 @@ A CLI for adding components to your project.
 
 Inspired by awersome nextjs library [shadcn/ui CLI](https://github.com/shadcn-ui/ui/tree/main/packages/cli).
 
+# Documentation
+
+Reusable component library for Expo and React Native projects.
+https://mallaui.io/
+
 ## Usage
 
 Use the `init` command to initialize dependencies for a new project.
