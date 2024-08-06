@@ -22,7 +22,7 @@ export default function AboutTabScreen() {
           malla UI
         </Text>
         <Text size='md' fontWeight='regular' color='secondary'>
-          v 0.0.7
+          v 0.0.8
         </Text>
       </View>
 
