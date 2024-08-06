@@ -10,11 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ro-mgh/mallaui",
+    "url": "git+https://github.com/ro-mgh/mallaui.git",
     "directory": "packages/cli"
   },
   "type": "module",
-  "bin": "./dist/index.js",
+  "bin": {
+    "mallaui": "dist/index.js"
+  },
   "keywords": [
     "components",
     "ui",
