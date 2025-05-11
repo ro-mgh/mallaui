@@ -4,7 +4,7 @@ Reusable components for Expo and React Native projects inspired by [shadcn-ui](h
 
 # Documentation
 
-https://mallaui.io/
+[https://mallaui.io/](https://mallaui-docs.vercel.app/)
 
 
 ## Examples
